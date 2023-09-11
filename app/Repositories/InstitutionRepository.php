@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Repositories;
 
-use App\Models\Site;
-use App\Http\Requests\StoreSiteRequest;
-use App\Http\Requests\UpdateSiteRequest;
+use App\Interfaces\InstitutionRepositoryInterface;
 
-class SiteController extends Controller
+class InstitutionRepository implements InstitutionRepositoryInterface
 {
-    /**
+     /**
      * Display a listing of the resource.
      */
     public function index()
@@ -19,7 +17,7 @@ class SiteController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSiteRequest $request)
+    public function store($request)
     {
         //
     }
@@ -27,7 +25,7 @@ class SiteController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Site $site)
+    public function show($id)
     {
         //
     }
@@ -35,7 +33,7 @@ class SiteController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateSiteRequest $request, Site $site)
+    public function update($request, $id)
     {
         //
     }
@@ -43,7 +41,7 @@ class SiteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Site $site)
+    public function destroy($id)
     {
         //
     }
